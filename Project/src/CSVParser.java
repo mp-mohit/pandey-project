@@ -18,14 +18,15 @@ public static List<Product> parseCSV(File file) {
         while ((line = br.readLine()) != null) {
             String[] data = line.split(CSV_SEPARATOR);
             Product product = new Product();
-            product.setId(data[0);
-            product.setName(data[1]);
-            product.setColor(data[2]);
-            product.setGender(data[3]);
-            product.setSize(data[4]);
-            product.setPrice(Double.parseDouble(data[5]));
-            product.setRating(Integer.parseInt(data[6]));
-            product.setAvailability(data[7].equals("Y"));
+            product.setId(Long.valueOf(data[0]));
+            product.setProductId(data[1]);
+            product.setName(data[2]);
+            product.setColor(data[3]);
+            product.setGender(data[4]);
+            product.setSize(data[5]);
+            product.setPrice(Double.parseDouble(data[6]));
+            product.setRating(Integer.parseInt(data[7]));
+            product.setAvailability(data[8].equals("Y"));
             products.add(product);
         }
     } catch (IOException e) {
