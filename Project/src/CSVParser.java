@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,4 +35,7 @@ public static List<Product> parseCSV(File file) {
     }
     return products;
 }
+
+    public static void loadCSVData(Connection conn, String s, String nike_tshirts) {
+    }
 }

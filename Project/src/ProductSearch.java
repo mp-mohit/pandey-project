@@ -27,7 +27,7 @@ public static void main(String[] args) {
         // similar create table statements for other companies
 
         // load csv data into database
-//        CSVParser.loadCSVData(conn, "nike_tshirts.csv", "nike_tshirts");
+        CSVParser.loadCSVData(conn, "nike_tshirts.csv", "nike_tshirts");
         // similar load statements for other companies
 
         // search for matching T-shirts and sort by output preference

@@ -24,7 +24,7 @@ public class DatabaseManager {
             statement.setLong(1, product.getId());
             statement.setString(2, product.getName());
             statement.setString(3, product.getColor());
-            statement.setBoolean(4, product.isGenderRecommendation());
+            statement.setString(4, product.getGenderRecommendation());
             statement.setString(5, product.getSize());
             statement.setDouble(6, product.getPrice());
             statement.setDouble(7, product.getRating());
@@ -40,7 +40,7 @@ public class DatabaseManager {
             PreparedStatement statement = connection.prepareStatement("UPDATE products SET name=?, color=?, gender_recommendation=?, size=?, price=?, rating=?, availability=? WHERE id=?");
             statement.setString(1, product.getName());
             statement.setString(2, product.getColor());
-            statement.setBoolean(3, product.isGenderRecommendation());
+            statement.setString(3, product.getGenderRecommendation());
             statement.setString(4, product.getSize());
             statement.setDouble(5, product.getPrice());
             statement.setDouble(6, product.getRating());
