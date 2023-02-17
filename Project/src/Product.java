@@ -1,3 +1,5 @@
+import java.util.Comparator;
+
 public class Product {
 
 
@@ -7,10 +9,9 @@ public class Product {
     private String productId;
     private String name;
     private String color;
-    private String gender;
     private String size;
     private double price;
-    private int rating;
+    private double rating;
     private boolean availability;
     private String genderRecommendation;
 
@@ -57,14 +58,6 @@ public class Product {
         this.color = color;
     }
 
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
     public String getSize() {
         return size;
     }
@@ -81,11 +74,11 @@ public class Product {
         this.price = price;
     }
 
-    public int getRating() {
+    public double getRating() {
         return rating;
     }
 
-    public void setRating(int rating) {
+    public void setRating(double rating) {
         this.rating = rating;
     }
 
@@ -97,12 +90,11 @@ public class Product {
         this.availability = availability;
     }
 
-    public Product(Long id, String productId, String name, String color, String gender, String size, double price, int rating, boolean availability, String genderRecommendation) {
+    public Product(Long id, String productId, String name, String color, String size, double price, int rating, boolean availability, String genderRecommendation) {
         this.id = id;
         this.productId = productId;
         this.name = name;
         this.color = color;
-        this.gender = gender;
         this.size = size;
         this.price = price;
         this.rating = rating;
@@ -117,7 +109,6 @@ public class Product {
                 ", productId='" + productId + '\'' +
                 ", name='" + name + '\'' +
                 ", color='" + color + '\'' +
-                ", gender='" + gender + '\'' +
                 ", size='" + size + '\'' +
                 ", price=" + price +
                 ", rating=" + rating +
@@ -125,4 +116,31 @@ public class Product {
                 ", genderRecommendation='" + genderRecommendation + '\'' +
                 '}';
     }
+
 }
+
+//class SortByProductId implements Comparator<Product> {
+//    // Method
+//    // Sorting in ascending order of roll number
+//    public int compare(Product a, Product b)
+//    {
+//        return a.getProductId().compareTo(b.getProductId());
+//    }
+//}
+//class SortBySize implements Comparator<Product> {
+//    // Method
+//    // Sorting in ascending order of name
+//    public int compare(Product a, Product b)
+//    {
+//        return a.getSize().compareTo(b.getSize());
+//    }
+//}
+//
+//class SortByPrice implements Comparator<Product> {
+//    // Method
+//    // Sorting in ascending order of name
+//    public int compare(Product a, Product b)
+//    {
+//        return (int) (a.getPrice() - b.getPrice());
+//    }
+//}
